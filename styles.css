@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 body {
   background-image: url("./assets/vincent-guth-mbo4I-IrGrs-unsplash.jpg"); /* Replace with your image URL */
@@ -12,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white; /* Text color */
+  color: white;
   font-family: "Raleway", sans-serif;
 }
 
@@ -25,18 +26,8 @@ body {
 
 .coming-soon {
   font-size: 85px;
-  /* font-weight: 100px; */
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #2c3e50;
-  color: white;
-  /* font-family: Arial, sans-serif; */
 }
 
 .countdown-container {
@@ -44,33 +35,37 @@ body {
   gap: 20px;
 }
 
+/* Circle Container */
 .circle-container {
   position: relative;
   width: 120px;
   height: 120px;
 }
 
-svg {
-  transform: rotate(-90deg);
+.circle-svg {
+  width: 120px;
+  height: 120px;
 }
 
-circle {
+.circle-container .background,
+.circle-container .progress {
   fill: none;
   stroke-width: 8;
 }
 
-.background {
-  stroke: #444; /* Circle background color */
+.circle-container .background {
+  stroke: #444;
 }
 
-.progress {
-  stroke: #1abc9c; /* Progress color */
+.circle-container .progress {
+  stroke: #1abc9c;
   stroke-linecap: round;
   stroke-dasharray: 314; /* 2 * Math.PI * 50 (circumference of the circle with r=50) */
-  stroke-dashoffset: 314; /* Initially not filled */
+  stroke-dashoffset: 314;
   transition: stroke-dashoffset 0.35s linear;
 }
 
+/* Labels */
 .label {
   position: absolute;
   top: 50%;
@@ -90,12 +85,7 @@ circle {
   font-size: 14px;
 }
 
-.progress {
-  stroke-dasharray: 314; /* 2 * Math.PI * 50 (circumference of the circle with r=50) */
-  stroke-dashoffset: 314; /* Initially not filled */
-  transition: stroke-dashoffset 0.35s linear;
-}
-
+/* Get Notified Button */
 .get-notified {
   background-color: black;
   width: max-content;
@@ -106,17 +96,18 @@ circle {
   text-align: center;
   color: white;
   cursor: pointer;
-  transition: transform 0.3s ease, font-size 0.3s ease; /* Add smooth transitions */
+  transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
 .get-notified:hover {
-  transform: scale(1.1); /* Slight expansion */
-  font-size: 22px; /* Increase font size */
+  transform: scale(1.1);
+  font-size: 22px;
 }
 
+/* Social Media Icons */
 .social-media-icons {
   display: flex;
-  gap: 20px; /* Space between icons */
+  gap: 20px;
   justify-content: center;
   margin-top: 20px;
 }
@@ -127,10 +118,71 @@ circle {
   font-size: 20px;
   transition: transform 0.3s ease, color 0.3s ease;
   margin: 5px;
-  margin-top: 40px;
 }
 
 .icon:hover {
-  transform: scale(1.2); /* Slight expansion on hover */
-  color: #1abc9c; /* Change color on hover */
+  transform: scale(1.2);
+  color: #1abc9c;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  body {
+    background-position: top;
+  }
+
+  .coming-soon {
+    font-size: 45px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+  }
+
+  /* Adjust Circle Size for Mobile */
+  .circle-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circle-svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circle-container .background,
+  .circle-container .progress {
+    stroke-width: 6;
+  }
+
+  .circle-container .progress {
+    stroke-dasharray: 251.2; /* 2 * Math.PI * 40 (circumference of the circle with r=40) */
+    stroke-dashoffset: 251.2;
+  }
+
+  .label {
+    border-bottom: 2px solid black;
+    padding-bottom: 8px;
+  }
+  /* Adjust Countdown Text for Mobile */
+  .label span {
+    font-size: 18px;
+  }
+
+  .label p {
+    font-size: 12px;
+  }
+
+  /* Get Notified Button */
+  .get-notified {
+    padding: 12px 18px;
+    font-size: 18px;
+  }
+
+  /* Adjust Social Media Icons */
+  .social-media-icons {
+    gap: 10px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
 }
