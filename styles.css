@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  background-image: url("./assets/vincent-guth-mbo4I-IrGrs-unsplash.jpg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Text color */
+  font-family: "Raleway", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon {
+  font-size: 85px;
+  /* font-weight: 100px; */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  /* font-family: Arial, sans-serif; */
+}
+
+.countdown-container {
+  display: flex;
+  gap: 20px;
+}
+
+.circle-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+svg {
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 8;
+}
+
+.background {
+  stroke: #444; /* Circle background color */
+}
+
+.progress {
+  stroke: #1abc9c; /* Progress color */
+  stroke-linecap: round;
+  stroke-dasharray: 314; /* 2 * Math.PI * 50 (circumference of the circle with r=50) */
+  stroke-dashoffset: 314; /* Initially not filled */
+  transition: stroke-dashoffset 0.35s linear;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.label span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.label p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.progress {
+  stroke-dasharray: 314; /* 2 * Math.PI * 50 (circumference of the circle with r=50) */
+  stroke-dashoffset: 314; /* Initially not filled */
+  transition: stroke-dashoffset 0.35s linear;
+}
+
+.get-notified {
+  background-color: black;
+  width: max-content;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, font-size 0.3s ease; /* Add smooth transitions */
+}
+
+.get-notified:hover {
+  transform: scale(1.1); /* Slight expansion */
+  font-size: 22px; /* Increase font size */
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 20px; /* Space between icons */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin: 5px;
+  margin-top: 40px;
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Slight expansion on hover */
+  color: #1abc9c; /* Change color on hover */
+}
