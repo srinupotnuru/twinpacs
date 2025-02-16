@@ -1,0 +1,103 @@
+.why-partner-container {
+  color: black;
+  text-align: center;
+  padding: 50px 20px;
+
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+
+    .highlight {
+      color: #e67e22;
+    }
+  }
+
+  .subtitle {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; // Adjusted column widths for more space
+    gap: 20px;
+    max-width: 1000px; // Increased max-width to make cards wider
+    margin: 0 auto;
+
+    .feature-card {
+      display: flex;
+      align-items: stretch;
+      background: rgba(243, 243, 243, 1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      width: 100%; // Ensures each card utilizes full space
+
+      .feature-image {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+          border: 4px solid white;
+        }
+      }
+
+      .feature-content {
+        flex: 2; // Adjusted ratio for a bit more width
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding-left: 20px;
+
+        .feature-title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .feature-description {
+          font-size: 14px;
+          color: #666;
+        }
+
+        h3 {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: rgba(61, 61, 61, 1);
+        }
+      }
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    .feature-grid {
+      grid-template-columns: 1fr; // Stack cards on small screens
+    }
+
+    .feature-card {
+      flex-direction: column;
+      text-align: center;
+
+      .feature-content {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+  }
+}

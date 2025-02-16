@@ -1,0 +1,67 @@
+.wrapper {
+  // take full width and height of the screen
+  background-color: rgb(250, 250, 250);
+  height: 100vh;
+  // display flex to align the content
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  img {
+    width: 28.5rem;
+    height: 29.4rem;
+  }
+
+  .image-section {
+    margin: 0 2rem;
+    width: 35%;
+  }
+  .about-twinpacs {
+    margin: 0 2rem;
+    width: 42%;
+    height: 29.4rem;
+    color: black;
+    display: flex;
+    font-weight: 700;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: start;
+    align-items: start;
+
+    .header {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      .sp1 {
+        color: black;
+      }
+      .sp2 {
+        color: rgba(232, 111, 37, 1);
+      }
+    }
+
+    .content {
+      margin-bottom: 5rem;
+      p {
+        text-align: left;
+        color: rgba(44, 44, 44, 1);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+    }
+
+    .get-connected-btn {
+      margin-bottom: 2rem;
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(232, 111, 37, 1);
+      padding: 1rem 2rem;
+      border-radius: 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

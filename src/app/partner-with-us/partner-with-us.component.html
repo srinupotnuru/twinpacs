@@ -1,0 +1,16 @@
+<div class="why-partner-container">
+  <h2 class="title">Why <span class="highlight">partner</span> with us?</h2>
+  <p class="subtitle">One stop solution for all needs</p>
+
+  <div class="feature-grid">
+    <div class="feature-card" *ngFor="let feature of features; let i = index">
+      <div class="feature-image">
+        <img [src]="feature.image" [alt]="feature.title" />
+      </div>
+      <div class="feature-content">
+        <h3 class="feature-title">{{ feature.title }}</h3>
+        <p class="feature-description">{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

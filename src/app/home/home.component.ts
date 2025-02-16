@@ -9,6 +9,7 @@ export class HomeComponent {
 
 
   ngAfterViewInit() {
+
     const video = document.getElementById("bg-video") as HTMLVideoElement;
     const vd1 = document.getElementById("vd1") as HTMLVideoElement;
     const vd2 = document.getElementById("vd2") as HTMLVideoElement;
@@ -28,6 +29,16 @@ export class HomeComponent {
     if (vd3) {
       vd3.play().catch(err => console.error("Autoplay blocked:", err));
     }
+
+    document.querySelectorAll("video").forEach((video) => {
+      video.play().catch((error) => {
+        console.log("Autoplay prevented:", error);
+        video.muted = true; // Mute and retry for autoplay compliance
+        video.play();
+      });
+    });
+
   }
+
 
 }
