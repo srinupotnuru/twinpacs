@@ -9,6 +9,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutTwinpacsComponent } from './about-twinpacs/about-twinpacs.component';
 import { ServicesComponent } from './services/services.component';
 import { PartnerWithUsComponent } from './partner-with-us/partner-with-us.component';
+import { ItServicesComponent } from './it-services/it-services.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { HiringsComponent } from './hirings/hirings.component';
+import { IndustriesCoveredComponent } from './industries-covered/industries-covered.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +24,15 @@ import { PartnerWithUsComponent } from './partner-with-us/partner-with-us.compon
     NavBarComponent,
     AboutTwinpacsComponent,
     ServicesComponent,
-    PartnerWithUsComponent
+    PartnerWithUsComponent,
+    ItServicesComponent,
+    ContactFormComponent,
+    TestimonialsComponent,
+    HiringsComponent,
+    IndustriesCoveredComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

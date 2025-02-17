@@ -1,0 +1,145 @@
+.wrapper {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+
+  h2 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .option-container {
+    margin-bottom: 20px;
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .option {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        input {
+          display: none;
+        }
+
+        .dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 2px solid #a0a0a0;
+          margin-right: 8px;
+          transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .text {
+          font-size: 16px;
+          font-weight: bold;
+          color: #a0a0a0;
+        }
+
+        input:checked + .dot {
+          background: #b87355;
+          border-color: #b87355;
+        }
+
+        input:checked + .dot + .text {
+          color: #b87355;
+        }
+      }
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgba(109, 109, 109, 1);
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      position: relative;
+
+      label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: rgba(109, 109, 109, 1);
+      }
+
+      input,
+      select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        max-width: 100%; // Prevents overflow beyond container
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; // Adds "..." if text is too long
+      }
+
+      // Extra spacing below dropdowns to prevent overlap
+      select + div {
+        margin-top: 10px;
+      }
+    }
+
+    .full-width {
+      grid-column: span 2;
+
+      .file-upload {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        background: #f9f9f9;
+        cursor: pointer;
+
+        .upload-icon {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.submit-button {
+  grid-column: span 2;
+  padding: 6px 30px; // Made smaller
+  border: none;
+  background: #d47941;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: auto;
+
+  &:hover {
+    background: #b87355;
+  }
+}

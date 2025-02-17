@@ -1,0 +1,94 @@
+<div class="wrapper">
+  <div class="option-container">
+    <h2 class="title">What are you looking for?</h2>
+    <div class="options">
+      <label class="option">
+        <input
+          type="radio"
+          name="selection"
+          [value]="'vendor'"
+          [(ngModel)]="selectedForm"
+          (change)="toggleForm()"
+        />
+        <span class="dot"></span>
+        <span class="text">Vendor Management</span>
+      </label>
+      <label class="option">
+        <input
+          type="radio"
+          name="selection"
+          [value]="'candidate'"
+          [(ngModel)]="selectedForm"
+          (change)="toggleForm()"
+        />
+        <span class="dot"></span>
+        <span class="text">Candidate Growth</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Vendor Management Form -->
+  <form *ngIf="selectedForm === 'vendor'" class="vendor-form">
+    <div class="form-group">
+      <label>Select the purpose</label>
+      <select>
+        <option>Select from below</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Company name</label>
+      <input type="text" placeholder="Company name" />
+    </div>
+    <div class="form-group">
+      <label>Enter your name</label>
+      <input type="text" placeholder="Select from below" />
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter mail id" />
+    </div>
+    <div class="form-group">
+      <label>Mobile number</label>
+      <input type="text" placeholder="Select from below" />
+    </div>
+    <div class="form-group">
+      <label>Location</label>
+      <select>
+        <option>Select from below</option>
+      </select>
+    </div>
+  </form>
+
+  <!-- Candidate Growth Form -->
+  <form *ngIf="selectedForm === 'candidate'" class="candidate-form">
+    <div class="form-group">
+      <label>Select the role</label>
+      <select>
+        <option>Select from below</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Enter your name</label>
+      <input type="text" placeholder="Phone number" />
+    </div>
+    <div class="form-group">
+      <label>Preferred Location</label>
+      <select>
+        <option>Select from below</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter mail id" />
+    </div>
+    <div class="form-group full-width">
+      <label>Upload Resume</label>
+      <div class="file-upload">
+        <span>Attached file</span>
+        <i class="upload-icon">⤴️</i>
+      </div>
+    </div>
+  </form>
+
+  <button type="submit" class="submit-button">Submit</button>
+</div>
