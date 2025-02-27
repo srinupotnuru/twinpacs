@@ -15,6 +15,10 @@ import { FormsModule } from '@angular/forms';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { HiringsComponent } from './hirings/hirings.component';
 import { IndustriesCoveredComponent } from './industries-covered/industries-covered.component';
+import { ServicesRouteComponent } from './services-route/services-route.component';
+import { IndustriesRouteComponent } from './industries-route/industries-route.component';
+import { CareersRouteComponent } from './careers-route/careers-route.component';
+import { ContactRouteComponent } from './contact-route/contact-route.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { IndustriesCoveredComponent } from './industries-covered/industries-cove
     ContactFormComponent,
     TestimonialsComponent,
     HiringsComponent,
-    IndustriesCoveredComponent
+    IndustriesCoveredComponent,
+    ServicesRouteComponent,
+    IndustriesRouteComponent,
+    CareersRouteComponent,
+    ContactRouteComponent
   ],
   imports: [
     FormsModule,

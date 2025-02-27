@@ -1,0 +1,93 @@
+.wrapper {
+  .header {
+    padding: 3rem;
+    background-color: rgb(254, 251, 249);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: black;
+      font-weight: 900;
+    }
+    .description {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(115, 115, 115, 1);
+    }
+  }
+
+  .content {
+    padding: 3rem;
+
+    .careers-wrapper {
+      display: flex;
+      flex-wrap: wrap; // Ensures items move to the next row if no space
+      gap: 20px; // Adds space between images
+      justify-content: center; // Centers the images horizontally
+      padding: 20px;
+      .job-card {
+        display: flex;
+        justify-content: space-between;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        width: max-content; // Adjust as needed
+
+        .job-card-content {
+          flex-grow: 1;
+
+          .job-title {
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: #000;
+          }
+
+          .job-description {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #737373;
+            margin: 5px 0 10px;
+          }
+
+          .job-details {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 15px;
+
+            .job-info {
+              display: flex;
+              align-items: center;
+              font-size: 0.75rem;
+              color: #737373;
+              i {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+        .apply-icon {
+          margin-left: 1.5rem;
+          cursor: pointer;
+          background-color: #e76f25;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i {
+            color: white;
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}

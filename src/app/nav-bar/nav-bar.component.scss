@@ -1,4 +1,5 @@
 .wrapper {
+  padding: 0 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,6 +13,7 @@
     align-items: center;
 
     .nav-item {
+      cursor: pointer;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -21,13 +23,15 @@
       .nav-item-logo {
         display: flex;
         justify-content: center;
-        background-color: rgba(237, 192, 171, 0.5);
+        align-items: center;
+        align-content: center;
+        background-color: #73737333;
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        img {
-          width: 20px;
-          height: auto;
+        i {
+          color: #19191b;
+          font-size: 20px;
         }
       }
 
@@ -36,19 +40,35 @@
         margin-left: 0.7rem;
       }
     }
+
+    /* Active State */
+    .active-logo {
+      background-color: rgba(237, 192, 171, 0.5) !important;
+
+      i {
+        color: #e86f25 !important;
+        font-size: 20px;
+      }
+    }
+
+    .active-text {
+      font-weight: 700;
+      color: #e86f25 !important;
+    }
   }
 
   .login-btn {
     display: flex;
     cursor: pointer;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
     justify-content: center;
     align-items: center;
     background-color: rgba(232, 111, 37, 1);
     width: 5.75rem;
     height: 2.3rem;
     border-radius: 1.5rem;
+    color: white;
 
     .login-text {
       margin-right: 0.5rem;

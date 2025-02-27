@@ -42,12 +42,13 @@
       overflow: hidden;
 
       &:hover {
+        background-color: #e76f25;
+        color: white;
         transform: scale(1.03);
       }
 
-      &.highlighted {
-        background-color: #e76f25;
-        color: white;
+      &:hover .service-icon {
+        display: block;
       }
 
       .service-content {
@@ -55,16 +56,12 @@
         align-items: center;
         gap: 0.5rem;
         position: relative;
+      }
 
-        .service-icon {
-          font-size: 4rem;
-          position: absolute;
-          left: -3rem;
-          top: 50%;
-          transform: translateY(-50%);
-          color: rgba(255, 255, 255, 0.25);
-          opacity: 0.8;
-        }
+      .service-icon {
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.8);
+        display: none; /* Initially hidden */
       }
 
       .arrow {

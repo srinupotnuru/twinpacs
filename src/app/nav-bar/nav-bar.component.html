@@ -1,29 +1,26 @@
-<div class="wrapper">
+<div class="wrapper" [ngStyle]="{ 'background-color': backgroundColor }">
   <div class="logo">
     <img src="assets/logo1.svg" alt="" />
   </div>
   <div class="nav-items">
-    <div class="nav-item" (click)="scrollToSection('services')">
-      <div class="nav-item-logo">
-        <img src="assets/Stack.svg" alt="" />
+    <div
+      class="nav-item"
+      *ngFor="let nav of navItems"
+      [routerLink]="nav.route"
+      routerLinkActive="active"
+    >
+      <div
+        class="nav-item-logo"
+        [ngClass]="{ 'active-logo': isActive(nav.route) }"
+      >
+        <i [class]="'ph-bold ' + nav.icon"></i>
       </div>
-      <div class="nav-item-text">Services</div>
-    </div>
-    <div class="nav-item" (click)="scrollToSection('industries')">
-      <div class="nav-item-logo"><img src="assets/Factory.svg" alt="" /></div>
-      <div class="nav-item-text">Industries</div>
-    </div>
-    <div class="nav-item" (click)="scrollToSection('careers')">
-      <div class="nav-item-logo">
-        <img src="assets/Vector.svg" alt="" />
+      <div
+        class="nav-item-text"
+        [ngClass]="{ 'active-text': isActive(nav.route) }"
+      >
+        {{ nav.text }}
       </div>
-      <div class="nav-item-text">Careers</div>
-    </div>
-    <div class="nav-item" (click)="scrollToSection('contact')">
-      <div class="nav-item-logo">
-        <img src="assets/Phone.svg" alt="" />
-      </div>
-      <div class="nav-item-text">Contact</div>
     </div>
   </div>
   <div class="login-btn">
