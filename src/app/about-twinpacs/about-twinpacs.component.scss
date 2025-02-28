@@ -65,3 +65,62 @@
     }
   }
 }
+
+.mobile-wrapper {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    display: none;
+  }
+  .mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 24.8rem;
+      height: 23.06rem;
+    }
+    .header {
+      padding-left: 1.8rem;
+      margin: 1rem 0;
+      display: flex;
+      justify-content: flex-start;
+      font-size: 1.5rem;
+      font-weight: 700;
+      .sp1 {
+        color: black;
+      }
+      .sp2 {
+        color: rgba(232, 111, 37, 1);
+      }
+    }
+
+    .about-twinpacs {
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: #2c2c2c;
+
+      .get-connected-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding: 15px 0;
+        width: 80%;
+        background-color: rgba(232, 111, 37, 1);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: rgba(232, 111, 37, 1);
+        }
+      }
+    }
+  }
+}

@@ -70,3 +70,45 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .it-services {
+    background-color: white;
+  }
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+
+    .service-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      border-radius: 8px;
+      background-color: #f5f5f5;
+      color: #000;
+      font-weight: 600;
+      transition: 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+
+      .service-content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+      }
+
+      .service-icon {
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.8);
+        display: none; /* Initially hidden */
+      }
+
+      .arrow {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

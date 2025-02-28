@@ -62,3 +62,9 @@
   font-size: 14px;
   color: #666;
 }
+
+@media (max-width: 1024px) {
+  .industries-container {
+    background-color: white;
+  }
+}

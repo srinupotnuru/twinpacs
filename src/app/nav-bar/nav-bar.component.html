@@ -1,8 +1,10 @@
 <div class="wrapper" [ngStyle]="{ 'background-color': backgroundColor }">
   <div class="logo">
-    <img src="assets/logo1.svg" alt="" />
+    <img src="assets/logo1.svg" alt="Logo" />
   </div>
-  <div class="nav-items">
+
+  <!-- Desktop Navigation -->
+  <div class="nav-items" [ngClass]="{ 'hide-on-mobile': isMobile }">
     <div
       class="nav-item"
       *ngFor="let nav of navItems"
@@ -23,11 +25,36 @@
       </div>
     </div>
   </div>
-  <div class="login-btn">
+
+  <!-- Mobile Menu Icon -->
+  <div class="menu-icon" (click)="toggleMenu()">
+    <i class="ph-bold ph-list"></i>
+    <!-- Replace with your preferred icon -->
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" *ngIf="menuOpen">
+    <div class="close-icon" (click)="toggleMenu()">
+      <i class="ph-bold ph-x"></i>
+      <!-- Close button -->
+    </div>
+    <div class="mobile-nav-items">
+      <div
+        class="mobile-nav-item"
+        *ngFor="let nav of navItems"
+        [routerLink]="nav.route"
+        (click)="toggleMenu()"
+      >
+        {{ nav.text }}
+      </div>
+    </div>
+  </div>
+
+  <div class="login-btn hide-on-mobile">
     <div class="login-text">Login</div>
     <div class="login-arrow">
       <div class="arrow">
-        <img src="assets//ArrowRight.svg" alt="" />
+        <img src="assets/ArrowRight.svg" alt="" />
       </div>
     </div>
   </div>

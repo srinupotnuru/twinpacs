@@ -21,8 +21,6 @@
   }
 
   .content {
-    padding: 3rem;
-
     .careers-wrapper {
       display: flex;
       flex-wrap: wrap; // Ensures items move to the next row if no space
@@ -89,5 +87,25 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .apply-icon {
+    cursor: pointer;
+    padding: 1rem;
+    background-color: red !important;
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50% !important;
+    display: flex; /* Ensure centering */
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Prevent extra width/height issues */
+  }
+
+  .apply-icon i {
+    color: white;
+    font-size: 1rem;
   }
 }

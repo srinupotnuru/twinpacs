@@ -11,6 +11,7 @@ export class ContactFormComponent {
   showForm: boolean = false; // Default to hiding form
 
   toggleForm() {
+    console.log("called")
     this.showForm = this.selectedForm === 'candidate';
   }
 

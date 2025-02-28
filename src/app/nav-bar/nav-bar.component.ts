@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class NavBarComponent {
 
+  isMobile: boolean = false;
+  menuOpen: boolean = false;
   navItems = [
     { text: 'Home', route: '/', icon: 'ph-browser' },
     { text: 'Services', route: '/services', icon: 'ph-stack' },
@@ -17,7 +19,19 @@ export class NavBarComponent {
   ];
 
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  @HostListener('window:resize', [])
+  checkScreenSize() {
+    this.isMobile = window.innerWidth < 768;
+  }
+
+
   constructor(private router: Router) {
+
+    this.checkScreenSize();
 
   }
 

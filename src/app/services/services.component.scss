@@ -1,7 +1,7 @@
 .services-wrapper {
   position: relative;
   width: 100%;
-  height: 80vh; /* Occupy 80% of the viewport height */
+  height: 100vh; /* Occupy 80% of the viewport height */
   margin: 10vh 0; /* Leaves 10% space at the top and bottom */
   overflow: hidden;
 }
@@ -39,6 +39,58 @@
 
     .service {
       margin: 0 2rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .services-wrapper {
+    position: relative;
+    width: auto;
+    height: max-content; /* Occupy 80% of the viewport height */
+    overflow-x: hidden;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Keeps video in the background */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+    color: white;
+    text-align: center;
+
+    span {
+      font-size: 2rem;
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column; /* Change to column to stack images */
+      align-items: center;
+      gap: 2rem; /* Space between images */
+      padding-bottom: 1.5rem;
+    }
+
+    .service {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .service img {
+      width: 90%;
+      height: auto;
     }
   }
 }
