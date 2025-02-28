@@ -16,6 +16,8 @@
   display: flex;
   align-items: center;
   margin: 0 1rem;
+
+  cursor: pointer;
 }
 
 .nav-item-logo {
@@ -50,11 +52,6 @@
 .active-text {
   font-weight: 700;
   color: #e86f25;
-}
-
-/* Hide navbar on mobile */
-.hide-on-mobile {
-  display: none;
 }
 
 /* Mobile menu button */
@@ -105,8 +102,29 @@
   cursor: pointer;
 }
 
+.login-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: #e86f25;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+
+  .login-arrow {
+    margin-left: 0.5rem;
+  }
+}
+
 /* Responsive styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  /* Hide navbar on mobile */
+  .hide-on-mobile {
+    display: none;
+  }
   .nav-items,
   .login-btn {
     display: none;

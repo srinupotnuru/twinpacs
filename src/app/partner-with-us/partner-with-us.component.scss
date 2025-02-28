@@ -28,7 +28,7 @@
     .feature-card {
       display: flex;
       align-items: stretch;
-      background: rgba(243, 243, 243, 1);
+      // background: rgba(243, 243, 243, 1);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -44,8 +44,8 @@
         overflow: hidden;
 
         img {
-          width: 100%;
-          height: 100%;
+          width: 10rem;
+          height: 10rem;
           object-fit: cover;
           border-radius: 10px;
           border: 4px solid white;
