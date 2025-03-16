@@ -7,11 +7,13 @@ import { Component } from '@angular/core';
 })
 export class IndustriesCoveredComponent {
   industries = [
-    { name: 'Executive Search', icon: 'ph-magnifying-glass' },
-    { name: 'Contract to Hire', icon: 'ph-user-circle-gear' },
-    { name: 'Permanent', icon: 'ph-meta-logo' },
-    { name: 'Client Hiring', icon: 'ph-scroll' },
-    { name: 'Bulk Placements', icon: 'ph-users-four' },
-    { name: 'Contract', icon: 'ph-files' }
+    { name: 'Communications, Media & Entertainment', icon: 'ph-film-slate' },
+    { name: 'Banking & Financial Services', icon: 'ph-bank' },
+    { name: 'Travel, Transportation,Hospitality & Logistics', icon: 'ph-truck' },
+    { name: 'Retail & Fast Moving Consumer Goods', icon: 'ph-shopping-cart-simple' },
+    { name: 'Healthcare & Insurance', icon: 'ph-heartbeat' },
+    { name: 'Shared Services and BPO', icon: 'ph-info' },
+    { name: 'Information Technology', icon: 'ph-brain' },
+    { name: "Manufacturing and Engineering", icon: "ph-factory" },
   ];
 }

@@ -1,29 +1,24 @@
-<div class="testimonials-section">
-  <h2 class="title">Testimonials</h2>
-  <div class="testimonial-card">
-    <p class="testimonial-text">
-      "My Journey In Recruitment Has Been An Incredibly Fulfilling One, Shaped
-      By Dedication, Expertise, And An Unwavering Commitment To Excellence. I
-      Began My Career As A Recruiter And Have Had The Privilege Of Leading
-      Recruitment Teams At Large, Renowned Companies Across Diverse Industries,
-      Including Airlines, Healthcare, E-Commerce, And Retail. My Experience
-      Spans High-Impact Hiring Initiatives, Including Scaling Recruitment
-      Efforts To Over 1,000 Hires Per Quarter, While Managing And Nurturing
-      High-Performing Teams.
+<div class="testimonial-container">
+  <h2 class="testimonial-title">Testimonials</h2>
+
+  <div class="testimonial-content">
+    <p>
+      {{ testimonials[currentTestimonial].text }}
     </p>
-    <p class="testimonial-text">
-      I’ve Always Strived To Align Talent Acquisition Strategies With Business
-      Goals, Using Data Insights And Market Intelligence To Optimize Processes
-      And Deliver Innovative Solutions. I Take Pride In Fostering Collaborative
-      Work Environments That Enable My Teams To Consistently Achieve Outstanding
-      Results. Today, I Am Proud To Have Established Twinpacs, Where I Work
-      Alongside An Incredibly Talented Team To Continue Shaping The Future Of
-      Recruitment. My Journey Is A Reflection Of My Vision, Humility, And My
-      Commitment To Adding Value In Every Step Of The Process."
-    </p>
-    <div class="author">
-      <h3 class="name">Parveen</h3>
-      <p class="position">Founder</p>
-    </div>
+  </div>
+
+  <div class="testimonial-author">
+    <strong>{{ testimonials[currentTestimonial].author }}</strong>
+    <span>{{ testimonials[currentTestimonial].designation }}</span>
+  </div>
+
+  <div class="testimonial-nav">
+    <span
+      *ngFor="let _ of testimonials; let i = index"
+      class="dot"
+      [class.active]="i === currentTestimonial"
+      (click)="showTestimonial(i)"
+    >
+    </span>
   </div>
 </div>

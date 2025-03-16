@@ -25,38 +25,20 @@
     .images-wrapper {
       display: flex;
       flex-wrap: wrap; // Ensures items move to the next row if no space
-      gap: 20px; // Adds space between images
+      gap: 50px; // Adds space between images
       justify-content: center; // Centers the images horizontally
       padding: 20px; // Optional padding
 
       .image-container {
         margin: 0 1.5rem;
-        // padding-right: 2rem;
-        // padding-bottom: 2rem;
         position: relative;
-        // overflow: hidden;
         width: 19.6rem;
         border-radius: 10px; /* Optional for rounded edges */
-
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 50%; // Adjust shadow height (50% means half the image)
-          background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0)
-          ); // Black transparent shadow
-          pointer-events: none; // Prevents interfering with clicks
-        }
       }
 
       .image-container img {
-        width: 19.6rem;
-        height: 20.4rem;
+        width: 23.6rem;
+        height: 21.4rem;
         display: block;
       }
 
@@ -72,16 +54,69 @@
         text-align: center;
         border-radius: 5px;
       }
+    }
+  }
+}
 
-      .image-container::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 20%; /* Adjust width */
-        height: 20%; /* Adjust height */
-        background-color: #e76f25; /* Border color */
-        z-index: -1;
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 100%;
+    .header {
+      padding: 3rem;
+      padding-bottom: 1rem;
+      background-color: rgb(254, 251, 249);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .title {
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: black;
+        font-weight: 900;
+      }
+      .description {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: rgba(115, 115, 115, 1);
+      }
+    }
+
+    .content {
+      padding-left: 0rem !important;
+      .images-wrapper {
+        display: flex;
+        flex-wrap: wrap; // Ensures items move to the next row if no space
+        // gap: 50px; // Adds space between images
+        justify-content: center; // Centers the images horizontally
+        // padding: 20px; // Optional padding
+
+        .image-container {
+          margin: 0 1.5rem;
+          position: relative;
+          width: 19.6rem;
+          border-radius: 10px; /* Optional for rounded edges */
+        }
+
+        .image-container img {
+          width: 23.6rem;
+          height: 21.4rem;
+          display: block;
+        }
+
+        .overlay-text {
+          position: absolute;
+          left: 48%;
+          top: 85%;
+          transform: translateX(-50%);
+          padding: 8px 15px;
+          font-size: 1rem;
+          font-weight: 700;
+          color: white;
+          text-align: center;
+          border-radius: 5px;
+        }
       }
     }
   }

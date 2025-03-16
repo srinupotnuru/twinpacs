@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  qualities = ["Expertise It Solutions", "Comprehensive recruiting Services", "Personlized Approach", "Agility & Flexibility", "End-to-end Support", "End-to-end Support", "End-to-end Support"]
+  qualities = ["Expertise It Solutions", "Comprehensive recruiting Services", "Personlized Approach", "Agility & Flexibility", "End-to-end Support", "End-to-end Support", "End-to-end Support", "Commitment to Quality", "Innovative and Forward-Thinking"]
 
 
   ngAfterViewInit() {

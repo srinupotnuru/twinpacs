@@ -159,6 +159,7 @@
   }
 
   .ctr {
+    margin-right: 1.5rem;
     display: flex;
     align-items: center;
     gap: 15px; /* Adjust spacing between circle and bar */
@@ -238,7 +239,9 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding: 1rem;
       align-items: flex-start;
+      // align-items: flex-start;
 
       .bar {
         height: 3rem;
@@ -259,13 +262,17 @@
       }
     }
     .icon {
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: rgba(232, 111, 37, 1);
-      width: 2rem;
-      height: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
+      i {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -328,8 +335,9 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    padding-top: 4rem !important;
     .content-wrapper {
-      padding: 1rem;
+      // padding: 1rem;
       padding-top: 2rem;
       position: relative;
       width: 100%;
@@ -411,6 +419,8 @@
       }
 
       .data {
+        padding: 1rem;
+        background-color: white;
         .head-text {
           margin: 1rem 0;
           font-size: 1.5rem;
@@ -478,12 +488,13 @@
     }
 
     .content {
-      padding-top: 5rem;
+      // padding-top: 5rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       color: white;
       text-align: center;
+      padding-bottom: 0;
 
       span {
         font-size: 2rem;

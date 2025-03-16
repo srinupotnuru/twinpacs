@@ -5,13 +5,9 @@
   <div class="grid-container">
     <div class="industry-item" *ngFor="let industry of industries">
       <div class="icon-wrapper">
-        <i class="ph-bold" [ngClass]="industry.icon"></i>
+        <i class="ph" [ngClass]="industry.icon"></i>
       </div>
       <h3 class="industry-title">{{ industry.name }}</h3>
-      <p class="industry-description">
-        Talent mapping, C-suite and Senior Management hiring and pipelining
-        talents for future hirings
-      </p>
     </div>
   </div>
 </div>
