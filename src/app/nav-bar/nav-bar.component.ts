@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -6,21 +6,35 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
+  isMobile = false;
+  menuOpen = false;
+  backgroundColor = 'white'; // Initial color
+  scrolled = false;
 
-  isMobile: boolean = false;
-  menuOpen: boolean = false;
   navItems = [
     { text: 'Home', route: '/', icon: 'ph-browser' },
     { text: 'Services', route: '/services', icon: 'ph-stack' },
     { text: 'Industries', route: '/industries', icon: 'ph-factory' },
-    { text: 'Careers', route: '/careers', icon: ' ph-suitcase' },
+    { text: 'Careers', route: '/careers', icon: 'ph-suitcase' },
     { text: 'Contact', route: '/contact', icon: 'ph-phone' }
   ];
 
+  constructor(private router: Router) {
+    this.checkScreenSize();
+  }
 
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.backgroundColor = 'white'; // Reset when navigating
+      }
+    });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrolled = window.scrollY > 0;
   }
 
   @HostListener('window:resize', [])
@@ -28,35 +42,15 @@ export class NavBarComponent {
     this.isMobile = window.innerWidth < 768;
   }
 
-
-  constructor(private router: Router) {
-
-    this.checkScreenSize();
-
-  }
-
-  ngOnInit() {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        // Set background color based on route
-        if (event.url === '/' || event.url === '/home') {
-          this.backgroundColor = 'transparent';
-        } else {
-          this.backgroundColor = 'rgb(254, 251, 249)';
-        }
-      }
-    });
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
   isActive(route: string): boolean {
     return this.router.url === route;
   }
 
-  backgroundColor: string = 'transparent'; // Default for home
-
-
   scrollToSection(route: string) {
-    this.router.navigate([route]); // Navigate to the provided route
+    this.router.navigate([route]);
   }
-
 }
