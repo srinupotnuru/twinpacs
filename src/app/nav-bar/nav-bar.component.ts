@@ -17,7 +17,7 @@ export class NavBarComponent implements OnInit {
     { text: 'Services', route: '/services', icon: 'ph-stack' },
     { text: 'Industries', route: '/industries', icon: 'ph-factory' },
     { text: 'Careers', route: '/careers', icon: 'ph-suitcase' },
-    { text: 'Contact', route: '/contact', icon: 'ph-phone' }
+    { text: 'Get Connected', route: '/contact', icon: 'ph-phone' }
   ];
 
   constructor(private router: Router) {
