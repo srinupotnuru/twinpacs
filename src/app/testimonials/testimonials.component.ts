@@ -16,7 +16,9 @@ export class TestimonialsComponent {
 
   testimonials = [
     {
-      text: `"My Journey In Recruitment Has Been An Incredibly Fulfilling One, Shaped By Dedication, Expertise, And An Unwavering Commitment To Excellence. I Began My Career As A Recruiter And Have Had The Privilege Of Leading Recruitment Teams At Large, Renowned Companies Across Diverse Industries, Including Airlines, Healthcare, E-Commerce, And Retail. My Experience Spans High-Impact Hiring Initiatives, Including Scaling Recruitment Efforts To Over 1,000 Hires Per Quarter, While Managing And Nurturing High-Performing Teams."`,
+      text: `"My journey in recruitment has been an incredibly fulfilling one, shaped by dedication, expertise, and an unwavering commitment to excellence. I began my career as a recruiter and have had the privilege of leading recruitment teams at large, renowned companies across diverse industries, including airlines, healthcare, e-commerce, and retail. My experience spans high-impact hiring initiatives, including scaling recruitment efforts to over 1,000 hires per quarter, while managing and nurturing high-performing teams.
+I’ve always strived to align talent acquisition strategies with business goals, using data insights and market intelligence to optimize processes and deliver innovative solutions. I take pride in fostering collaborative work environments that enable my teams to consistently achieve outstanding results. Today, I am proud to have established Twinpacs, where I work alongside an incredibly talented team to continue shaping the future of recruitment. My journey is a reflection of my vision, humility, and my commitment to adding value in every step of the process."
+`,
       author: "Parveen",
       designation: "Founder"
 
