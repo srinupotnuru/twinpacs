@@ -5,7 +5,7 @@
   padding: 8rem 0rem;
   // display flex to align the content
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: row;
 
@@ -17,16 +17,21 @@
   .image-section {
     margin: 0 2rem;
     width: 35%;
+    align-self: center;
   }
+
   .about-twinpacs {
     margin: 0 2rem;
-    width: 32rem;
+    margin-top: 5%;
+    width: 50%;
+    min-width: 20rem;
+    // width : 32rem;
     height: 29.4rem;
     color: black;
     display: flex;
     font-weight: 700;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-content: start;
     align-items: flex-start;
 
@@ -39,9 +44,11 @@
       display: flex;
       font-size: 1.5rem;
       font-weight: 700;
+
       .sp1 {
         color: black;
       }
+
       .sp2 {
         color: rgba(232, 111, 37, 1);
       }
@@ -49,8 +56,10 @@
 
     .content {
       margin-bottom: 5rem;
+
       p {
         text-align: left;
+        font-size: 1rem !important;
         color: rgba(44, 44, 44, 1);
         font-size: 0.9rem;
         font-weight: 500;
@@ -68,18 +77,22 @@
   .wrapper {
     display: none;
   }
+
   .mobile-wrapper {
     background-color: white;
     display: flex;
     flex-direction: column;
+
     p {
       font-weight: 400;
     }
+
     img {
       width: 24.8rem;
       height: 23.06rem;
       margin: 1rem 0;
     }
+
     .header {
       display: flex;
       justify-content: center;
@@ -89,9 +102,11 @@
       display: flex;
       font-size: 1.5rem;
       font-weight: 700;
+
       .sp1 {
         color: black;
       }
+
       .sp2 {
         color: rgba(232, 111, 37, 1);
       }
