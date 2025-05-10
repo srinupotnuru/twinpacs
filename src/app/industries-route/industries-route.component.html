@@ -4,17 +4,15 @@
       <span>Industries</span>
     </div>
     <div class="description">
-      <span
-        >Twinpacs Is An Emerging Recruitment Startup With A Dynamic, Experienced
-        Team</span
-      >
+      <span>Twinpacs Is An Emerging Recruitment Startup With A Dynamic, Experienced
+        Team</span>
     </div>
   </div>
 
   <div class="content">
     <div class="images-wrapper">
       <div class="image-container" *ngFor="let industry of industriesData">
-        <img [src]="industry.imageUrl" alt="data" />
+        <img loading="lazy" [src]="industry.imageUrl" alt="data" />
       </div>
     </div>
 
