@@ -1,26 +1,18 @@
-<div class="wrapper" [ngClass]="{ scrolled: scrolled }">
+<div class="wrapper" [ngClass]="{
+  'nav-hidden': !isNavbarVisible,
+   'scrolled': scrolled 
+  }">
   <div class="logo">
     <img src="assets/logo1.svg" alt="Logo" />
   </div>
 
   <!-- Desktop Navigation -->
   <div class="nav-items" [ngClass]="{ 'hide-on-mobile': isMobile }">
-    <div
-      class="nav-item"
-      *ngFor="let nav of navItems"
-      [routerLink]="nav.route"
-      routerLinkActive="active"
-    >
-      <div
-        class="nav-item-logo"
-        [ngClass]="{ 'active-logo': isActive(nav.route) }"
-      >
+    <div class="nav-item" *ngFor="let nav of navItems" [routerLink]="nav.route" routerLinkActive="active">
+      <div class="nav-item-logo" [ngClass]="{ 'active-logo': isActive(nav.route) }">
         <i [class]="'ph ' + nav.icon"></i>
       </div>
-      <div
-        class="nav-item-text"
-        [ngClass]="{ 'active-text': isActive(nav.route) }"
-      >
+      <div class="nav-item-text" [ngClass]="{ 'active-text': isActive(nav.route) }">
         {{ nav.text }}
       </div>
     </div>
@@ -39,12 +31,7 @@
       <!-- Close button -->
     </div>
     <div class="mobile-nav-items">
-      <div
-        class="mobile-nav-item"
-        *ngFor="let nav of navItems"
-        [routerLink]="nav.route"
-        (click)="toggleMenu()"
-      >
+      <div class="mobile-nav-item" *ngFor="let nav of navItems" [routerLink]="nav.route" (click)="toggleMenu()">
         {{ nav.text }}
       </div>
     </div>

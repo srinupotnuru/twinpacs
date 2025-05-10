@@ -1,4 +1,6 @@
 .wrapper {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
   padding: 0 2rem;
   display: flex;
   flex-direction: row;
@@ -10,8 +12,8 @@
   left: 0;
   z-index: 1000;
   background-color: transparent;
-  transition: background-color 0.3s ease-in-out,
-    backdrop-filter 0.3s ease-in-out;
+  // transition: background-color 0.3s ease-in-out,
+  //   backdrop-filter 0.3s ease-in-out;
 
   .logo img {
     height: 6rem;
@@ -25,7 +27,7 @@
 
 /* Transparent Navbar on Scroll */
 .wrapper.scrolled {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(5px); // Smooth blur effect for better visibility
 }
 
@@ -146,6 +148,7 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
+
   /* Hide Navbar items */
   .hide-on-mobile {
     display: none;
@@ -165,4 +168,10 @@
   .wrapper {
     background: transparent;
   }
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }

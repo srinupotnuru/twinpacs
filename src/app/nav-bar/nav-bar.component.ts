@@ -12,6 +12,9 @@ export class NavBarComponent implements OnInit {
   backgroundColor = 'white'; // Initial color
   scrolled = false;
 
+  isNavbarVisible = true;
+  private lastScrollTop = 0;
+
   navItems = [
     { text: 'Home', route: '/', icon: 'ph-browser' },
     { text: 'Services', route: '/services', icon: 'ph-stack' },
@@ -34,6 +37,16 @@ export class NavBarComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
+
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > this.lastScrollTop && currentScroll > 100) {
+      this.isNavbarVisible = false; // Hide navbar
+    } else {
+      this.isNavbarVisible = true;  // Show navbar
+    }
+    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
     this.scrolled = window.scrollY > 0;
   }
 

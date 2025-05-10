@@ -9,6 +9,20 @@ export class ContactFormComponent {
 
 
   selectedOption: string = 'candidate'; // Default selected option
+  roles: string[] = [
+    'UI/UX Designer',
+    'Data Analyst',
+    'Accountant',
+    'Brand Manager',
+    'Front end developer',
+    'Interior designer',
+    'Marketing head',
+    'Sales executive',
+    'Customer support',
+    'Architect',
+    'AWS',
+    'Delivery support'
+  ]
 
   constructor() { }
 
