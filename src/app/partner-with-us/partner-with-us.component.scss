@@ -33,9 +33,10 @@
 
   .feature-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr; // Adjusted column widths for more space
+    // grid-template-columns: 1fr 1.2fr; // Adjusted column widths for more space
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 1000px; // Increased max-width to make cards wider
+    max-width: 1170px; // Increased max-width to make cards wider
     margin: 0 auto;
 
     .feature-card {
