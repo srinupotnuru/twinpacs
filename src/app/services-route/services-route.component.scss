@@ -1,17 +1,19 @@
 .wrapper {
   .header {
-    padding: 3rem;
+    padding: 8rem 3rem 3rem;
     background-color: rgb(254, 251, 249);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .title {
       margin-top: 1rem;
       font-size: 2rem;
       color: black;
       font-weight: 900;
     }
+
     .description {
       margin-top: 1rem;
       font-size: 0.9rem;
@@ -20,9 +22,29 @@
     }
   }
 
-  .content {
+  .main-content {
     padding: 3rem;
+
+    @media (max-width: 1024px) {
+      // width: 100%;
+      padding: 0px;
+    }
+
+
+    .heading-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .heading {
+      align-self: center;
+      width: 30rem;
+      display: flex;
+      justify-content: space-around;
+    }
+
     h2 {
+      cursor: pointer;
       color: black;
       font-size: 1.5rem;
       font-weight: bold;
@@ -32,21 +54,88 @@
       display: block; // Change to block for full-width behavior
       margin-bottom: 4rem;
 
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        width: 60px;
-        height: 4px;
-        background-color: #e76f25;
+      &.active {
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: 50%;
+          transform: translateX(-50%);
+          align-self: center;
+          width: 60px;
+          height: 4px;
+          background-color: #e76f25;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .content {
+      // transform: translateX(-100%);
+      // transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+      // &.visible {
+      //   opacity: 1;
+      //   transform: translateX(0);
+      // }
+    }
+
+    .images-wrapper {
+      display: flex;
+      flex-wrap: wrap; // Ensures items move to the next row if no space
+      // gap: 50px; // Adds space between images
+      justify-content: center; // Centers the images horizontally
+      padding: 20px; // Optional padding
+
+      @media (max-width: 1024px) {
+        // width: 100%;
+        padding: 0px;
+      }
+
+
+      .image-container {
+        margin: 0 1.5rem;
+        position: relative;
+        width: 24rem;
         border-radius: 10px;
+
+        /* Optional for rounded edges */
+        @media (max-width: 1024px) {
+          // width: 100%;
+          margin: 0;
+        }
+
+      }
+
+      .image-container img {
+        width: 23.6rem;
+        height: 21.4rem;
+        display: block;
+
+        @media (max-width: 1024px) {
+          width: 100%;
+          // width: 22.6rem;
+        }
+      }
+
+      .overlay-text {
+        position: absolute;
+        left: 48%;
+        top: 85%;
+        transform: translateX(-50%);
+        padding: 8px 15px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
       }
     }
 
     .solution-row {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Ensures two items per row */
+      grid-template-columns: repeat(2, 1fr);
+      /* Ensures two items per row */
       gap: 2rem;
       justify-content: center;
       align-items: center;
@@ -56,7 +145,8 @@
     /* Ensure proper layout for smaller screens */
     @media (max-width: 1024px) {
       .solution-row {
-        grid-template-columns: 1fr; /* Stack images in a single column on mobile */
+        grid-template-columns: 1fr;
+        /* Stack images in a single column on mobile */
       }
     }
 
@@ -73,7 +163,8 @@
       margin: 0 2rem;
       position: relative;
       width: 100%;
-      max-width: 34.3rem; /* Set max width for consistency */
+      max-width: 34.3rem;
+      /* Set max width for consistency */
       overflow: hidden;
     }
 
@@ -120,12 +211,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       .title {
         margin-top: 1rem;
         font-size: 2rem;
         color: black;
         font-weight: 900;
       }
+
       .description {
         margin-top: 1rem;
         font-size: 0.9rem;
@@ -136,6 +229,7 @@
 
     .content {
       padding: 2rem;
+
       h2 {
         color: black;
         font-size: 1.5rem;
@@ -169,7 +263,8 @@
       /* Ensure proper layout for smaller screens */
       @media (max-width: 1024px) {
         .solution-row {
-          grid-template-columns: 1fr; /* Stack images in a single column on mobile */
+          grid-template-columns: 1fr;
+          /* Stack images in a single column on mobile */
         }
       }
 
@@ -178,7 +273,8 @@
         margin: 0 2rem;
         position: relative;
         width: 100%;
-        max-width: 34.3rem; /* Set max width for consistency */
+        max-width: 34.3rem;
+        /* Set max width for consistency */
         overflow: hidden;
       }
 

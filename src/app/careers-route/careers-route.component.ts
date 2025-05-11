@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './careers-route.component.html',
   styleUrls: ['./careers-route.component.scss']
 })
+
 export class CareersRouteComponent {
 
   jobListings = [

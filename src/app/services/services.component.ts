@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-services',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent {
+  constructor(private router: Router) { }
 
+  navigateTo = (index: number) => {
+    this.router.navigate(['/services'], { queryParams: { index } })
+  }
 
 
 }

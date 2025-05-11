@@ -4,16 +4,14 @@
       <span>Careers</span>
     </div>
     <div class="description">
-      <span
-        >Start doing work that matters, passionate people and foster a culture
-        that empowers you to do your best work.</span
-      >
+      <span>Start doing work that matters, passionate people and foster a culture
+        that empowers you to do your best work.</span>
     </div>
   </div>
 
   <div class="content">
     <div class="careers-wrapper">
-      <div class="job-card" *ngFor="let job of jobListings">
+      <div class="job-card" *ngFor="let job of jobListings" [routerLink]="['/contact']">
         <div class="job-card-content">
           <div class="job-title">{{ job.title }}</div>
           <p class="job-description">

@@ -6,6 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent {
+
+  private intervalId: any;
+
+  ngOnInit() {
+    this.startAutoSlide();
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+  startAutoSlide() {
+    this.intervalId = setInterval(() => {
+      this.currentTestimonial = (this.currentTestimonial + 1) % this.testimonials.length;
+    }, 3000); // Change testimonial every 3 seconds
+  }
+
   showFullText: boolean = false;  // Controls the visibility of additional text
 
   // Toggles the text visibility
@@ -17,8 +36,8 @@ export class TestimonialsComponent {
   testimonials = [
     {
       text: `"My journey in recruitment has been an incredibly fulfilling one, shaped by dedication, expertise, and an unwavering commitment to excellence. I began my career as a recruiter and have had the privilege of leading recruitment teams at large, renowned companies across diverse industries, including airlines, healthcare, e-commerce, and retail. My experience spans high-impact hiring initiatives, including scaling recruitment efforts to over 1,000 hires per quarter, while managing and nurturing high-performing teams.
-I’ve always strived to align talent acquisition strategies with business goals, using data insights and market intelligence to optimize processes and deliver innovative solutions. I take pride in fostering collaborative work environments that enable my teams to consistently achieve outstanding results. Today, I am proud to have established Twinpacs, where I work alongside an incredibly talented team to continue shaping the future of recruitment. My journey is a reflection of my vision, humility, and my commitment to adding value in every step of the process."
-`,
+      I’ve always strived to align talent acquisition strategies with business goals, using data insights and market intelligence to optimize processes and deliver innovative solutions. I take pride in fostering collaborative work environments that enable my teams to consistently achieve outstanding results. Today, I am proud to have established Twinpacs, where I work alongside an incredibly talented team to continue shaping the future of recruitment. My journey is a reflection of my vision, humility, and my commitment to adding value in every step of the process."
+      `,
       author: "Parveen",
       designation: "Founder"
 

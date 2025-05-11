@@ -1,4 +1,5 @@
 .industries-container {
+  margin: 4rem;
   color: black;
   text-align: center;
   padding: 50px 20px;
@@ -7,6 +8,8 @@
 .title {
   font-size: 1.5rem;
   font-weight: 700;
+
+  // padding: 8rem 3rem 3rem;
 
   &::after {
     content: "";
@@ -34,6 +37,8 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin: 0 auto;
+  max-width: calc(4 * 250px + 3 * 30px);
+  /* 4 columns + 3 gaps */
 }
 
 .industry-item {

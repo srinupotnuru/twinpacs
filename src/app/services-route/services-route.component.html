@@ -9,50 +9,77 @@
     </div>
   </div>
 
-  <div class="content">
-    <div>
-      <h2>IT Solutions</h2>
+  <div class="main-content">
+    <div class="heading-container">
+      <div class="heading">
+        <h2 (click)="changeIndex(1)" [class.active]="currentIndex ==1">IT Services
+        </h2>
+        <h2 (click)="changeIndex(2)" [class.active]="currentIndex ==2" [class.visible]="currentIndex==2"> Staffing
+          Solutions</h2>
+      </div>
     </div>
 
-    <div class="solutions">
-      <div class="solution-row">
-        <div class="image-container">
-          <img src="assets/it-solutions/artificial-intelligence.jpeg" loading="lazy" alt="Artificial Intelligence" />
-          <div class="overlay-text">Artificial Intelligence</div>
+    <div class="content">
+      <div *ngIf="currentIndex==1" class="images-wrapper">
+
+        <div class=" image-container ">
+          <img src=" assets/it-solutions/ItGroup 32.png" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Sustainability Services</div> -->
         </div>
-        <div class="image-container right">
-          <img src="assets/it-solutions/cognitive-operations.jpeg" loading="lazy" alt="Artificial Intelligence" />
-          <div class="overlay-text">Cognitive Business Operations</div>
+        <div class="image-container">
+          <img src="assets/it-solutions/ItGroup 33.png" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">IOT and Digital Engineering</div> -->
+        </div>
+        <div class="image-container">
+          <img src="assets/it-solutions/ItGroup 39.png" loading="lazy" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Artificial Intelligence</div> -->
+        </div>
+        <div class="image-container ">
+          <img src="assets/it-solutions/ItGroup 38.png" loading="lazy" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Cognitive Business Operations</div> -->
+        </div>
+        <div class="image-container">
+          <img src="assets/it-solutions/ItGroup 37.png" loading="lazy" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Consulting</div> -->
+        </div>
+        <div class="image-container ">
+          <img src="assets/it-solutions/ItGroup 36.png" loading="lazy" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Cybersecurity</div> -->
+        </div>
+        <div class="image-container">
+          <img src="assets/it-solutions/ItGroup 35.png" loading="lazy" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Data & Analytics</div> -->
+        </div>
+        <div class="image-container ">
+          <img src="assets/it-solutions/ItGroup 34.png" loading="lazy" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Enterprise Solutions</div> -->
         </div>
       </div>
-      <div class="solution-row">
-        <div class="image-container">
-          <img src="assets/it-solutions/consulting.jpeg" loading="lazy" alt="Artificial Intelligence" />
-          <div class="overlay-text">Consulting</div>
+
+      <div class="images-wrapper" *ngIf="currentIndex==2">
+        <div class="image-container ">
+          <img src="assets/staffing-solutions/Group 32.png" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Sustainability Services</div> -->
         </div>
-        <div class="image-container right">
-          <img src="assets/it-solutions/cyber-security.jpeg" loading="lazy" alt="Artificial Intelligence" />
-          <div class="overlay-text">Cybersecurity</div>
+        <div class="image-container ">
+          <img src="assets/staffing-solutions/Group 33.png" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Sustainability Services</div> -->
         </div>
-      </div>
-      <div class="solution-row">
-        <div class="image-container">
-          <img src="assets/it-solutions/data-analytics.jpeg" loading="lazy" alt="Artificial Intelligence" />
-          <div class="overlay-text">Data & Analytics</div>
+        <div class="image-container ">
+          <img src="assets/staffing-solutions/Group 34.png" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Sustainability Services</div> -->
         </div>
-        <div class="image-container right">
-          <img src="assets/it-solutions/enterprise-solutions.jpeg" loading="lazy" alt="Artificial Intelligence" />
-          <div class="overlay-text">Enterprise Solutions</div>
+        <div class="image-container ">
+          <img src="assets/staffing-solutions/Group 35.png" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Sustainability Services</div> -->
         </div>
-      </div>
-      <div class="solution-row">
-        <div class="image-container">
-          <img src="assets/it-solutions/iot.jpeg" alt="Artificial Intelligence" />
-          <div class="overlay-text">IOT and Digital Engineering</div>
+        <div class="image-container ">
+          <img src="assets/staffing-solutions/Group 36.png" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Sustainability Services</div> -->
         </div>
-        <div class="image-container right">
-          <img src="assets/it-solutions/sustainability.jpeg" alt="Artificial Intelligence" />
-          <div class="overlay-text">Sustainability Services</div>
+        <div class="image-container ">
+          <img src="assets/staffing-solutions/Group 37.png" alt="Artificial Intelligence" />
+          <!-- <div class="overlay-text">Sustainability Services</div> -->
         </div>
       </div>
     </div>

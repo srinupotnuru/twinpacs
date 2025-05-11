@@ -5,11 +5,13 @@
   align-items: center;
   background-color: white;
   padding-top: 2rem;
+
   .header {
     h2 {
       font-size: 1.5em;
       color: black;
     }
+
     margin-bottom: 1rem;
   }
 
@@ -132,12 +134,15 @@
 }
 
 @media screen and (max-width: 1024px) {
+
   .wrapper,
   .form-container,
   .form-group {
-    width: 100% !important; /* Force full viewport width */
+    width: 100% !important;
+    /* Force full viewport width */
     max-width: 100% !important;
   }
+
   .wrapper {
     padding: 2rem;
   }
@@ -154,14 +159,16 @@
   .form-group input {
     width: 100% !important;
     max-width: 100% !important;
-    box-sizing: border-box; /* Ensures padding doesn't reduce width */
+    box-sizing: border-box;
+    /* Ensures padding doesn't reduce width */
     padding: 10px;
   }
 
   .form-group select {
     width: 100% !important;
     max-width: 100% !important;
-    box-sizing: border-box; /* Ensures padding doesn't reduce width */
+    box-sizing: border-box;
+    /* Ensures padding doesn't reduce width */
     padding: 10px;
   }
 

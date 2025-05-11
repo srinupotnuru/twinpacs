@@ -13,12 +13,8 @@
   </div>
 
   <div class="testimonial-nav">
-    <span
-      *ngFor="let _ of testimonials; let i = index"
-      class="dot"
-      [class.active]="i === currentTestimonial"
-      (click)="showTestimonial(i)"
-    >
+    <span *ngFor="let _ of testimonials; let i = index" class="dot" [class.active]="i === currentTestimonial"
+      (click)="showTestimonial(i)">
     </span>
   </div>
 </div>

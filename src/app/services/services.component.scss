@@ -1,10 +1,42 @@
 .services-wrapper {
-  background-color: white;
+  // background-color: white;
+  background-color: rgb(250, 250, 250);
   position: relative;
   width: 100%;
-  height: 100vh; /* Occupy 80% of the viewport height */
-  margin: 10vh 0; /* Leaves 10% space at the top and bottom */
+  height: 1000px;
+  /* Occupy 80% of the viewport height */
+  // margin: 0 0 10vh;
+  /* Leaves 10% space at the top and bottom */
   overflow: hidden;
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 1rem 0;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    .sp1 {
+      color: black;
+      white-space: pre;
+    }
+
+    .sp2 {
+      color: rgba(232, 111, 37, 1);
+    }
+  }
+}
+
+.apply-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.ph-bold {
+  font-weight: bolder;
 }
 
 .bg-video {
@@ -15,17 +47,19 @@
   height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%);
-  // z-index: -1; /* Keeps video in the background */
+  // transform: scale(1);
+  // z-index: -1;/* Keeps video in the background */
 }
 
 .content {
+  margin-top: 9.5rem;
   position: relative;
   z-index: 1;
   padding-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  color: black;
   text-align: center;
 
   span {
@@ -33,16 +67,52 @@
   }
 
   .services {
+    align-items: stretch !important;
     margin-top: 4rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    display: flex;
-    flex-direction: row;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* Change to column to stack images */
+      align-items: center;
+      gap: 2rem;
+      /* Space between images */
+      padding-bottom: 1.5rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: start;
+    }
 
     .service {
+      padding: 25px;
+      // min-height: 327px;
+      height: 45vh;
+      width: 42%;
+      font-size: 1.15rem;
+      // min-width: 526px;
+      border-radius: 15px;
+      // background: rgba(232, 111, 37, 0.2);
+      background: rgba(230, 124, 58, 0.2);
+
+      backdrop-filter: blur(5px);
       margin: 0 2rem;
       cursor: pointer;
+      text-align: left;
+
+      @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        height: auto;
+      }
     }
   }
 }
@@ -52,7 +122,8 @@
     background-color: white;
     position: relative;
     width: auto;
-    height: max-content; /* Occupy 80% of the viewport height */
+    height: max-content;
+    /* Occupy 80% of the viewport height */
     overflow-x: hidden;
     margin: 0;
   }
@@ -74,7 +145,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    color: black;
     text-align: center;
     padding-top: 0;
 
@@ -83,10 +154,13 @@
     }
 
     .services {
+      width: 100%;
       display: flex;
-      flex-direction: column; /* Change to column to stack images */
+      flex-direction: column;
+      /* Change to column to stack images */
       align-items: center;
-      gap: 2rem; /* Space between images */
+      gap: 2rem;
+      /* Space between images */
       padding-bottom: 1.5rem;
     }
 

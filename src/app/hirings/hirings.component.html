@@ -1,4 +1,4 @@
-<div class="jobs-section">
+<!-- <div class="jobs-section">
   <h2 class="title">We are Hiring</h2>
   <div class="job-cloud">
     <span class="job" style="top: 10%; left: 30%; font-size: 2rem"
@@ -19,5 +19,38 @@
     <span class="job" style="top: 85%; left: 40%">Architect</span>
     <span class="job" style="top: 15%; left: 60%">AWS</span>
     <span class="job" style="top: 75%; left: 10%">Delivery support</span>
+  </div>
+</div> -->
+
+<div class="wrapper">
+  <div class="content">
+    <div class="header">
+      We are Hiring
+    </div>
+    <div class="careers-wrapper">
+      <div class="job-card" *ngFor="let job of jobListings | slice:0:jobsToShow" (click)="navigateTo()">
+        <div class="job-card-content">
+          <div class="job-title">{{ job.title }}</div>
+          <!-- <div class="line"></div> -->
+          <!-- <p class="job-description">
+            {{ job.description }}
+          </p> -->
+          <div class="job-details">
+            <div class="job-info">
+              <i class="ph-bold ph-clock"></i>
+              <span>{{ job.jobType }}</span>
+            </div>
+            <div class="job-info">
+              <i class="ph-bold ph-map-pin"></i>
+              <span>{{ job.location }}</span>
+            </div>
+            <div class="job-info">
+              <i class="ph-bold ph-factory"></i>
+              <span>{{ job.company }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

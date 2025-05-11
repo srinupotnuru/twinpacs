@@ -1,17 +1,19 @@
 .wrapper {
   .header {
-    padding: 3rem;
+    padding: 8rem 3rem 3rem;
     background-color: rgb(254, 251, 249);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .title {
       margin-top: 1rem;
       font-size: 2rem;
       color: black;
       font-weight: 900;
     }
+
     .description {
       margin-top: 1rem;
       font-size: 0.9rem;
@@ -29,6 +31,7 @@
       padding: 20px;
       padding-bottom: 5rem;
       padding-top: 5rem;
+
       .job-card {
         display: flex;
         justify-content: space-between;
@@ -64,6 +67,7 @@
               align-items: center;
               font-size: 0.75rem;
               color: #737373;
+
               i {
                 margin-right: 5px;
               }
@@ -100,10 +104,12 @@
     width: 25px !important;
     height: 25px !important;
     border-radius: 50% !important;
-    display: flex; /* Ensure centering */
+    display: flex;
+    /* Ensure centering */
     align-items: center;
     justify-content: center;
-    box-sizing: border-box; /* Prevent extra width/height issues */
+    box-sizing: border-box;
+    /* Prevent extra width/height issues */
   }
 
   .apply-icon i {
